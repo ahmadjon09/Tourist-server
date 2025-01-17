@@ -59,7 +59,8 @@ app.post('/upload', (req, res) => {
     }
 
     const uploadedImages = req.files.map(
-      file => `${req.protocol}://localhost:8000/uploads/${file.filename}`
+      file =>
+        `${req.protocol}://tourist-server.onrender.com/uploads/${file.filename}`
     )
     res.status(200).json({
       message: 'Images successfully uploaded!',
